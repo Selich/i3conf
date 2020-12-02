@@ -2,6 +2,7 @@ set $mod Mod4
 set $alt Mod1
 
 font pango:Fira Code 10
+#font pango: Monospace 10
 
 
 # Enable back_and_forth
@@ -294,6 +295,7 @@ for_window [class="Chromium" window_role="pop-up"] floating enable
 #client.unfocused #333333 #333333 #888888 #FFFFFF
 #client.urgent #C20000 #C20000 #FFFFFF #FFFFFF
 
+exec --no-startup-id "compton"
 # autostart:
 exec nm-applet
 exec nitrogen --restore
@@ -316,4 +318,13 @@ bindsym $mod+Escape scratchpad show
 #exec --no-startup-id gnome-terminal -name yaqterm
 #for_window [instance="yaqterm"] floating enable;
 #for_window [instance="yaqterm"] move scratchpad; [instance="yaqterm"] scratchpad show; move position 0px 22px; resize shrink height 300px; resize grow width 683px; move scratchpad
+#
 #bindsym $mod+y [instance="yaqterm"] scratchpad show
+exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec --no-startup-id "setxkbmap -model pc104 -layout us,hr -option grp:alt_shift_toggle"
+gaps outer 17
+gaps inner 10
+
+
+
+
